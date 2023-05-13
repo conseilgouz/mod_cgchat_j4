@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="module" version="4.0" client="site">
+	<name>mod_cgchat</name>
+	<author>ConseilGouz</author>
+	<creationDate>2023/03/15</creationDate>
+	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
+	<authorUrl>www.conseilgouz.com</authorUrl>
+	<version>1.0</version>
+	<description>CG Chat Module</description>
+	<files>
+		<filename module="mod_cgchat">mod_cgchat.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldprefix="ConseilGouz\Component\CGChat\Administrator\Field">
+			<fieldset name="basic">
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="template" type="cgchattemplates" default="default" label="Template" />
+				<field name="autoiniciar" type="list" default="0" label="Auto Init" description="If not, CG Chat will be 'sleeping' until the user move the mouse to its position">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="show_hour" type="list" default="0" label="Show hour">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="show_sessions" type="list" default="0" label="Show sessions">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="show_privados" type="list" default="0" label="Show privates" description="Needs 'show sessions' on. Only works in pro version. In CG Chat config privates must be enabled">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<changelogurl>https://raw.githubusercontent.com/conseilgouz/mod_cgchat_j4/master/mod_cgchat_changelog.xml</changelogurl>
+	<updateservers>
+	<server type="extension" name="mod_cgchat" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/mod_cgchat_update.xml</server>
+	</updateservers>
+</extension>
