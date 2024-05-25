@@ -2,12 +2,12 @@
 <extension method="upgrade" type="module" version="4.0" client="site">
 	<name>mod_cgchat</name>
 	<author>ConseilGouz</author>
-	<creationDate>2023/03/15</creationDate>
-	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved</copyright>
-	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<creationDate>2024-05-25</creationDate>
+	<copyright>Copyright (C) 2024 ConseilGouz. All rights reserved</copyright>
+	<license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<description>CG Chat Module</description>
 	<files>
 		<filename module="mod_cgchat">mod_cgchat.php</filename>
