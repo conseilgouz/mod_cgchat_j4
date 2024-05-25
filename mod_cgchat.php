@@ -1,10 +1,10 @@
 <?php
 /**
-* CG Chat Module  - Joomla 4.x Module
-* Version			: 1.0.0
+* CG Chat Module  - Joomla 4.x/5.x Module
+* Version			: 1.0.1
 * Package			: CG Chat
-* copyright 		: Copyright (C) 2023 ConseilGouz. All rights reserved.
-* license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+* copyright 		: Copyright (C) 2024 ConseilGouz. All rights reserved.
+* license    		: https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
 * From Kide ShoutBox
 */
 
@@ -12,31 +12,31 @@ defined('_JEXEC') or die('Restricted access');
 use Joomla\CMS\Factory;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatHead;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatUser;
-use ConseilGouz\Component\CGChat\Site\Helper\CGChatHelper;
-use ConseilGouz\Component\CGChat\Site\Helper\CGChatLinks;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatTemplate;
 use ConseilGouz\Component\CGChat\Site\View\CGChat\HtmlView;
 
-if (DEFINED("CGCHAT_LOADED")) return; // component already active
+if (DEFINED("CGCHAT_LOADED")) {
+    return;
+} // component already active
 
 $defines = JPATH_BASE."/components/com_cgchat/index.html";
 if (!file_exists($defines)) {
-	echo "You need install com_cgchat.zip";
-	return;
+    echo "You need install com_cgchat";
+    return;
 }
-
-$lang = Factory::getLanguage();
+$app = Factory::getApplication();
+$lang = $app->getLanguage();
 $lang->load("com_cgchat");
 
 $tpl = CGChatTemplate::getInstance();
-$session = Factory::getSession();
-if (!$session->get("template", '', 'cgchat'))
-	$tpl->tuser = $params->get('template');
+$session = $app->getSession();
+if (!$session->get("template", '', 'cgchat')) {
+    $tpl->tuser = $params->get('template');
+}
 HtmlView::preparar();
 $tpl->view = 'cgchat';
 $tpl->check_language();
 
-$doc = Factory::getDocument();
 $kuser = CGChatUser::getInstance();
 $privs = $params->get('show_sessions', 0) && $params->get('show_privados', 0) && $kuser->can_write ? 1 : 0;
 CGChatHead::addScript("
