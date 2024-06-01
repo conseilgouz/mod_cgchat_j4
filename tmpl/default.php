@@ -10,9 +10,8 @@
 defined('_JEXEC') or die('Restricted access');
 use Joomla\CMS\Factory;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatHead;
-use ConseilGouz\Component\CGChat\Site\Helper\CGChatUser;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatTemplate;
-use ConseilGouz\Component\CGChat\Site\View\CGChat\HtmlView;
+use ConseilGouz\Component\CGChat\Site\View\Cgchat\HtmlView;
 
 if (DEFINED("CGCHAT_LOADED")) {
     return;
@@ -35,8 +34,6 @@ if (!$session->get("template", '', 'cgchat')) {
 HtmlView::preparar();
 $tpl->view = 'cgchat';
 $tpl->check_language();
-
-$kuser = CGChatUser::getInstance();
 
 CGChatHead::addScript("
 cgchat.show_hour = ".$params->get('show_hour', 0).";

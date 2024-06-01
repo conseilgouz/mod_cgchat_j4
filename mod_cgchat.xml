@@ -7,7 +7,7 @@
 	<license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>1.2.0</version>
+	<version>1.2.1</version>
 	<description>MOD_CGCHAT_DESC</description>
   	<namespace path="src">ConseilGouz\Module\Cgchat</namespace>
 	<files>
