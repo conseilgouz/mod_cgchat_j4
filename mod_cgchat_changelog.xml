@@ -2,6 +2,18 @@
 	<changelog>
 		<element>mod_cgchat</element>
 		<type>module</type>
+		<version>1.2.0</version>
+        <note>
+            <item>Update : 01/06/2024</item>
+        </note>
+        <change>
+            <item>CG Chat component 1.2.0 compatibility</item>
+            <item>CG Chat module becomes a service provider</item>
+        </change>
+	</changelog>
+	<changelog>
+		<element>mod_cgchat</element>
+		<type>module</type>
 		<version>1.0.1</version>
         <note>
             <item>Update : 25/05/2024</item>
