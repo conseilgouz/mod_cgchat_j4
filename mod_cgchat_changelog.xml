@@ -30,7 +30,7 @@
         </note>
         <fix>
             <item>CG Chat component 1.2.3 compatibility</item>
-        </change>
+        </fix>
 	</changelog>
 	<changelog>
 		<element>mod_cgchat</element>
