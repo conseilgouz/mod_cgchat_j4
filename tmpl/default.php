@@ -9,6 +9,7 @@
 
 defined('_JEXEC') or die('Restricted access');
 use Joomla\CMS\Factory;
+use Joomla\CMS\Plugin\PluginHelper;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatHead;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatTemplate;
 use ConseilGouz\Component\CGChat\Site\View\Cgchat\HtmlView;
@@ -26,6 +27,18 @@ $app = Factory::getApplication();
 $lang = $app->getLanguage();
 $lang->load("com_cgchat");
 
+PluginHelper::importPlugin('cgchat');
+$response = false;
+$contentEventArguments = [
+    'context' => 'com_cgchat.cgchat',
+    'params'  => $params,
+    'response'    => &$response,
+];
+Factory::getApplication()->triggerEvent('onCGChatStart', $contentEventArguments);
+if ($response) { // error found in plugins
+   echo $response;
+   return false;
+}
 $tpl = CGChatTemplate::getInstance();
 $session = $app->getSession();
 if (!$session->get("template", '', 'cgchat')) {

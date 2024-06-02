@@ -2,6 +2,17 @@
 	<changelog>
 		<element>mod_cgchat</element>
 		<type>module</type>
+		<version>1.2.2</version>
+        <note>
+            <item>Update : 02/06/2024</item>
+        </note>
+        <addition>
+            <item>Call onCGChatStart event from CG Chat plugins</item>
+        </addition>
+	</changelog>
+	<changelog>
+		<element>mod_cgchat</element>
+		<type>module</type>
 		<version>1.2.1</version>
         <note>
             <item>Update : 01/06/2024</item>
