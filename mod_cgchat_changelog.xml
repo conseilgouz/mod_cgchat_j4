@@ -2,6 +2,17 @@
 	<changelog>
 		<element>mod_cgchat</element>
 		<type>module</type>
+		<version>1.3.0</version>
+        <note>
+            <item>Update : 02/06/2024</item>
+        </note>
+        <fix>
+            <item>JED Checker fixes</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>mod_cgchat</element>
+		<type>module</type>
 		<version>1.2.2</version>
         <note>
             <item>Update : 02/06/2024</item>
