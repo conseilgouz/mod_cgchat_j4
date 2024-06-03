@@ -10,7 +10,6 @@
 defined('_JEXEC') or die('Restricted access');
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;
-use ConseilGouz\Component\CGChat\Site\Helper\CGChatHead;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatTemplate;
 use ConseilGouz\Component\CGChat\Site\View\Cgchat\HtmlView;
 
