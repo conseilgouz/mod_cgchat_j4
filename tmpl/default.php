@@ -48,10 +48,6 @@ HtmlView::preparar();
 $tpl->view = 'cgchat';
 $tpl->check_language();
 
-CGChatHead::addScript("
-cgchat.show_hour = ".$params->get('show_hour', 0).";
-cgchat.show_sessions = ".$params->get('show_sessions', 0).";
-cgchat.autostart = ".$params->get('autostart', 0).";");
 $tpl->assign('com', 'mod');
 $tpl->assign('show_hour', $params->get('show_hour', 0));
 $tpl->assign('autostart', $params->get('autostart', 0));
