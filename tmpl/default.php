@@ -8,8 +8,12 @@
 */
 
 defined('_JEXEC') or die('Restricted access');
+use Joomla\CMS\Component\ComponentHelper;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
 use Joomla\CMS\Plugin\PluginHelper;
+use Joomla\Utilities\IpHelper;
+use ConseilGouz\Component\CGChat\Site\Helper\CGChatHelper;
 use ConseilGouz\Component\CGChat\Site\Helper\CGChatTemplate;
 use ConseilGouz\Component\CGChat\Site\View\Cgchat\HtmlView;
 
@@ -35,9 +39,26 @@ $contentEventArguments = [
 ];
 Factory::getApplication()->triggerEvent('onCGChatStart', $contentEventArguments);
 if ($response) { // error found in plugins
-   echo $response;
-   return false;
+    echo $response;
+    return false;
 }
+$ip = IpHelper::getIp();
+//$ip = '54.36.148.179'; // test FR
+//$ip = '218.92.1.234'; // test Chine
+$app = Factory::getApplication();
+$session = $app->getSession();
+$session->set("ip", $ip, 'cgchat');
+$com_params = ComponentHelper::getParams('com_cgchat');
+if ($com_params->get('countryinfo')) {
+    if (!extension_loaded('curl')) {
+        echo Text::_('COM_CGCHAT_COUNTRY_NOCURL');
+        return false;
+    }
+    if (!CGChatHelper::check_country($ip, $com_params)) {
+        return false;
+    }
+}
+
 $tpl = CGChatTemplate::getInstance();
 $session = $app->getSession();
 if (!$session->get("template", '', 'cgchat')) {
