@@ -1,5 +1,16 @@
 <changelogs>
-	<changelog>
+	<changelog
+		<element>mod_cgchat</element>
+		<type>module</type>
+		<version>1.4.1</version>
+        <note>
+            <item>Update : 16/06/2024</item>
+        </note>
+        <fix>
+            <item>Don't check country if already known</item>
+        </fix>
+	</changelog>
+	<changelog
 		<element>mod_cgchat</element>
 		<type>module</type>
 		<version>1.4.0</version>

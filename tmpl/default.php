@@ -54,8 +54,10 @@ if ($com_params->get('countryinfo')) {
         echo Text::_('COM_CGCHAT_COUNTRY_NOCURL');
         return false;
     }
-    if (!CGChatHelper::check_country($ip, $com_params)) {
-        return false;
+    if (!$session->get("country", '', 'cgchat')) {// unknown country
+        if (!CGChatHelper::check_country($ip, $com_params)) {
+            return false;
+        }
     }
 }
 
