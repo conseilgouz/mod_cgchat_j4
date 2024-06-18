@@ -2,12 +2,12 @@
 <extension method="upgrade" type="module" version="4.0" client="site">
 	<name>CG Chat</name>
 	<author>ConseilGouz</author>
-	<creationDate>2024-06-16</creationDate>
+	<creationDate>2024-06-18</creationDate>
 	<copyright>Copyright (C) 2024 ConseilGouz. All rights reserved</copyright>
 	<license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>1.4.1</version>
+	<version>1.4.5</version>
 	<description>MOD_CGCHAT_DESC</description>
   	<namespace path="src">ConseilGouz\Module\Cgchat</namespace>
 	<files>
@@ -31,15 +31,7 @@
 				</field>
 				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="MOD_CGCHAT_MODULECLASS_SFX_DESC" />
 				<field name="template" type="cgchattemplates" default="default" label="MOD_CGCHAT_TEMPLATE" />
-				<field name="autostart" type="list" default="0" label="MOD_CGCHAT_AUTOSTART" description="MOD_CGCHAT_AUTOSTART">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
-				</field>
 				<field name="show_hour" type="list" default="0" label="MOD_CGCHAT_SHOWHOUR" description="MOD_CGCHAT_SHOWHOUR_DESC">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
-				</field>
-				<field name="show_sessions" type="list" default="0" label="MOD_CGCHAT_SHOWSESSIONS" description="MOD_CGCHAT_SHOWSESSIONS_DESC">
 					<option value="0">No</option>
 					<option value="1">Yes</option>
 				</field>

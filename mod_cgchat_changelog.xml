@@ -1,5 +1,16 @@
 <changelogs>
-	<changelog
+	<changelog>
+		<element>mod_cgchat</element>
+		<type>module</type>
+		<version>1.4.5</version>
+        <note>
+            <item>Update : 18/06/2024</item>
+        </note>
+        <fix>
+            <item>Remove unused parameters</item>
+        </fix>
+	</changelog>
+	<changelog>
 		<element>mod_cgchat</element>
 		<type>module</type>
 		<version>1.4.1</version>
@@ -10,7 +21,7 @@
             <item>Don't check country if already known</item>
         </fix>
 	</changelog>
-	<changelog
+	<changelog>
 		<element>mod_cgchat</element>
 		<type>module</type>
 		<version>1.4.0</version>
