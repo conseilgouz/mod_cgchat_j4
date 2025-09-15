@@ -2,6 +2,17 @@
 	<changelog>
 		<element>mod_cgchat</element>
 		<type>module</type>
+		<version>1.4.7</version>
+        <note>
+            <item>Update : 15/09/2025</item>
+        </note>
+        <fix>
+            <item>Use ConseilGouz library</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>mod_cgchat</element>
+		<type>module</type>
 		<version>1.4.6</version>
         <note>
             <item>Update : 24/08/2025</item>
